@@ -90,7 +90,66 @@
         <h1>Сливочное мороженое</h1>
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <!--form -->
+            <form oninput="x.value=price.value">
+                <div>
+                    <label for="sorting">Сортировка:</label>
+                    <select id="sorting" name="sorting">
+                        <option>по популярности</option>
+                        <option>по цене</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="price">Цена: <output name="x" for="price" >100</output> руб. - 500 руб.</label>
+                    <input type="range" id="price" min="0" max="700" value="100" step="1">
+                </div>
+                <div>
+                    <ul>
+                        Жирность:
+                        <li>
+                            <input type="radio" id="fat1" name="fat" value="0">
+                            <label for="fat1">0%</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="fat2" name="fat" value="10" checked>
+                            <label for="fat2">до 10%</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="fat3" name="fat" value="30">
+                            <label for="fat3">до 30%</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="fat4" name="fat" value="30">
+                            <label for="fat4">выше 30%</label>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        Наполнители:
+                        <li>
+                            <input type="checkbox" id="filler1" name="filler" value="chocolate" checked>
+                            <label for="filler1">шоколадные</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="filler2" name="filler" value="sugar" checked>
+                            <label for="filler2">сахарные присыпки</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="filler3" name="filler" value="fruit">
+                            <label for="filler3">фрукты</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="filler4" name="filler" value="syrup">
+                            <label for="filler4">сиропы</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="filler5" name="filler5" value="jam">
+                            <label for="filler5">джемы</label>
+                        </li>
+                    </ul>
+                </div>
+                <button type="submit">Применить</button>
+            </form>
         </section>
         <section class="catalog">
             <h2 class="visually-hidden">Список видов мороженого</h2>
