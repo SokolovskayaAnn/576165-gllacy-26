@@ -28,12 +28,12 @@
             </ul>
             <ul>
                 <li>
-                  <form class="visually-hidden">
-                      <p>
-                          <label for="search-field" class="visually-hidden">Строка поиска</label>
-                          <input id="search-field" type="search" name="search-field" value="" placeholder="Что ищем?">
-                      </p>
-                  </form>
+                    <form class="visually-hidden">
+                        <p>
+                            <label for="search-field" class="visually-hidden">Строка поиска</label>
+                            <input id="search-field" type="search" name="search-field" value="" placeholder="Что ищем?">
+                        </p>
+                    </form>
                 </li>
                 <li>
                     <a href="">Вход</a>
@@ -90,17 +90,24 @@
         <h1>Сливочное мороженое</h1>
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form oninput="x.value=price.value">
+            <form>
                 <div>
                     <label for="sorting">Сортировка:</label>
                     <select id="sorting" name="sorting">
                         <option>по популярности</option>
-                        <option>по цене</option>
+                        <option>сначала недорогие</option>
+                        <option>сначала дорогие</option>
+                        <option>по жирности</option>
                     </select>
                 </div>
                 <div>
-                    <label for="price">Цена: <output name="x" for="price" >100</output> руб. - 500 руб.</label>
-                    <input type="range" id="price" min="0" max="700" value="100" step="1">
+                    Цена: 100 руб. - 500 руб.
+                    <div>
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <ul>
@@ -127,19 +134,19 @@
                     <ul>
                         Наполнители:
                         <li>
-                            <input type="checkbox" id="filler1" name="filler" value="chocolate" checked>
+                            <input type="checkbox" id="filler1" name="filler1" value="chocolate" checked>
                             <label for="filler1">шоколадные</label>
                         </li>
                         <li>
-                            <input type="checkbox" id="filler2" name="filler" value="sugar" checked>
+                            <input type="checkbox" id="filler2" name="filler2" value="sugar" checked>
                             <label for="filler2">сахарные присыпки</label>
                         </li>
                         <li>
-                            <input type="checkbox" id="filler3" name="filler" value="fruit">
+                            <input type="checkbox" id="filler3" name="filler3" value="fruit">
                             <label for="filler3">фрукты</label>
                         </li>
                         <li>
-                            <input type="checkbox" id="filler4" name="filler" value="syrup">
+                            <input type="checkbox" id="filler4" name="filler4" value="syrup">
                             <label for="filler4">сиропы</label>
                         </li>
                         <li>
@@ -299,10 +306,10 @@
     <footer>
         <div>
             <ul>
-              <li><a href="https://twitter.com/htmlacademy_ru">Твиттер</a></li>
-              <li><a href="https://www.instagram.com/htmlacademy/">Инстаграм</a></li>
-              <li><a href="https://www.facebook.com/htmlacademy">Фейсбук</a></li>
-              <li><a href="https://vk.com/htmlacademy">Вконтакте</a></li>
+                <li><a href="https://twitter.com/htmlacademy_ru">Твиттер</a></li>
+                <li><a href="https://www.instagram.com/htmlacademy/">Инстаграм</a></li>
+                <li><a href="https://www.facebook.com/htmlacademy">Фейсбук</a></li>
+                <li><a href="https://vk.com/htmlacademy">Вконтакте</a></li>
             </ul>
         </div>
         <div>
