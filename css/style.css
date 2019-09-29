@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #849d8f;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #ffbc9e;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.main-navigation {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #849d8f;
+}
+
+.site-navigation,
+.user-navigation {
+    list-style: none;
+}
+
+.site-navigation a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.user-navigation a {
+    color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+    text-decoration: none;
+    background-color: #f7f6f3;
+    color: #323232;
+}
+
+.header-worktime {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.header-telephone {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.advantages {
+    background-color: #ede0c7;
+    background-image: url("../img/bg-waffle.jpg");
+    background-repeat: repeat;
+}
+
+.advantages .about {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #323232;
+}
+
+.advantages-list {
+    list-style: none;
+}
+
+.advantage-item {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #323232;
+}
+
+.news {
+    background-color: #ffffff;
+    background-image: url("../img/bg-news.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    color: #323232;
+}
+
+.news h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.news a {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-decoration: underline;
+    color: #323232;
+}
+
+.news a:hover,
+.news a:focus,
+.news a:active {
+    color: #e84d37;
+}
+
+.mail {
+    background-color: #f8f7f4;
+    background-image: url("../img/bg-mail.png");
+    background-repeat: no-repeat;
+}
+
+.mail p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #323232;
+}
+
+form input {
+    color: #999999;
+}
+
+form input:hover {
+    border-color: #9a9a9a;
+}
+
+form input:focus {
+    border-color: #2e88e4;
+}
+
+.button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #f26843, #e74a35);
+    /*border: none;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.36);*/
+}
+
+.button:hover,
+.button:focus {
+    opacity: 0.8;
+}
+
+.button:active {
+    background: linear-gradient(to top, #f26843, #e74a35);
+    opacity: 0.93;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+.footer-social a {
+    color: #849d8f;
+    background-color: rgba(255, 255, 255, 0.8);
+    /*border: 2px solid rgba(255, 255, 255, 0.5);*/
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.footer-social a:active {
+    background-color: rgba(255, 255, 255, 0.5);
+    /*border: 2px solid rgba(255, 255, 255, 0.7);*/
+}
+
+.footer-information {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.for-providers {
+    font-weight: 700;
+}
+
+.footer-information ul {
+    list-style: none;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.footer-copyright a {
+    text-decoration: underline;
+}

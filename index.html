@@ -4,13 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title>GllacyShop</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header class="main-header">
+        <nav class="main-navigation">
             <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
-            <ul class="main-menu">
+            <ul class="site-navigation">
                 <li>
                     <a href="catalog.html">Каталог</a>
                     <ul class="sub-menu visually-hidden">
@@ -24,7 +27,7 @@
                 <li><a href="delivery.html">Доставка и оплата</a></li>
                 <li><a href="about.html">О компании</a></li>
             </ul>
-            <ul>
+            <ul class="user-navigation">
                 <li>
                     <form class="visually-hidden">
                         <p>
@@ -54,7 +57,7 @@
                 </li>
             </ul>
         </nav>
-        <p>C 10 до 20, ежедневно<br> 8 812 450-25-25</p>
+        <p><span class="header-worktime">C 10 до 20, ежедневно</span><br><span class="header-telephone">8 812 450-25-25</span></p>
     </header>
     <main>
         <h1 class="visually-hidden">GllacyShop</h1>
@@ -139,46 +142,46 @@
             </ul>
         </div>
 
-        <section>
-            <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+        <section class="advantages">
+            <p class="about">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
             <h2 class="visually-hidden">Преимущества</h2>
-            <ul>
-                <li>
+            <ul class="advantages-list">
+                <li class="advantage-item">
                     <h3 class="visually-hidden">Собственное производство</h3>
                     <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
                 </li>
-                <li>
+                <li class="advantage-item">
                     <h3 class="visually-hidden">Натуральные ингредиенты</h3>
                     <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
                     </p>
                 </li>
-                <li>
+                <li class="advantage-item">
                     <h3 class="visually-hidden">Проверенные поставщики</h3>
                     <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
                 </li>
-                <li>
+                <li class="advantage-item">
                     <h3 class="visually-hidden">Надежная доставка</h3>
                     <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
                 </li>
             </ul>
         </section>
         <div class="container">
-            <section>
+            <section class="news">
                 <h2>Новое в нашем блоге</h2>
                 <p><a href="">10 способов сервировки
                         фруктовых щербетов к
                         столу</a>
                 </p>
             </section>
-            <section>
+            <section class="mail">
                 <h2 class="visually-hidden">Рассылка</h2>
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-                <form>
+                <form class="form">
                     <p>
                         <label class="visually-hidden" for="user-mailing-address">Электронная почта</label>
                         <input id="user-mailing-address" type="text" name="user-mailing-address" placeholder="email@example.com">
                     </p>
-                    <button type="submit">Отправить</button>
+                    <button class="button" type="submit">Отправить</button>
                 </form>
             </section>
         </div>
@@ -217,29 +220,27 @@
         </div>
 
     </main>
-    <footer>
-        <div>
+    <footer class="main-footer">
+        <div class="footer-social">
             <ul>
-                <li><a href="https://twitter.com/htmlacademy_ru">Твиттер</a></li>
-                <li><a href="https://www.instagram.com/htmlacademy/">Инстаграм</a></li>
-                <li><a href="https://www.facebook.com/htmlacademy">Фейсбук</a></li>
-                <li><a href="https://vk.com/htmlacademy">Вконтакте</a></li>
+                <li><a class="social-button" href="https://twitter.com/htmlacademy_ru">Твиттер</a></li>
+                <li><a class="social-button" href="https://www.instagram.com/htmlacademy/">Инстаграм</a></li>
+                <li><a class="social-button" href="https://www.facebook.com/htmlacademy">Фейсбук</a></li>
+                <li><a class="social-button" href="https://vk.com/htmlacademy">Вконтакте</a></li>
             </ul>
         </div>
-        <div>
+        <div class="footer-information">
             <ul>
-                <li><a href="">Для поставщиков</a></li>
+                <li class="for-providers"><a href="">Для поставщиков</a></li>
                 <li><a href="">О производстве</a></li>
                 <li><a href="">Наши документы</a></li>
-                <li><a href="">Экологиеские стандарты</a></li>
+                <li><a href="">Экологические стандарты</a></li>
             </ul>
         </div>
-        <div>
+        <p class="footer-copyright">
             <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип htmlacademy"></a>
-            <p>
-                Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
-            </p>
-        </div>
+            Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
+        </p>
     </footer>
 </body>
 
