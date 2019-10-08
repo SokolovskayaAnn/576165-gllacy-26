@@ -49,6 +49,10 @@ a:active {
     color: #ffffff;
 }
 
+.user-navigation li {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .site-navigation a:hover,
 .site-navigation a:focus,
 .user-navigation a:hover,
@@ -211,4 +215,62 @@ form input:focus {
 
 .footer-copyright a {
     text-decoration: underline;
+}
+
+.breadcrumbs {
+    list-style: none;
+}
+
+.breadcrumbs li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-item h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-decoration: underline;
+}
+
+.catalog-item-price {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.catalog-item-price span {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.catalog-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /*тень*/
+}
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.pagination-item a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.pagination-item-current a {
+    color: #323232;
+    background-color: #ffffff;
 }

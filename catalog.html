@@ -10,12 +10,10 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="index.html">
-                <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
-            </a>
-            <ul class="main-menu">
+    <header class="main-header">
+        <nav class="main-navigation">
+            <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
+            <ul class="site-navigation">
                 <li>
                     <a href="catalog.html">Каталог</a>
                     <ul class="sub-menu visually-hidden">
@@ -29,17 +27,17 @@
                 <li><a href="delivery.html">Доставка и оплата</a></li>
                 <li><a href="about.html">О компании</a></li>
             </ul>
-            <ul>
+            <ul class="user-navigation">
                 <li>
                     <form class="visually-hidden">
                         <p>
-                            <label for="search-field" class="visually-hidden">Строка поиска</label>
+                            <label class="visually-hidden" for="search-field">Строка поиска</label>
                             <input id="search-field" type="search" name="search-field" value="" placeholder="Что ищем?">
                         </p>
                     </form>
                 </li>
                 <li>
-                    <a href="">Вход</a>
+                    <a href="">Вход </a>
                     <form method="post" class="visually-hidden">
                         <p>
                             <label class="visually-hidden" for="user-email">Электронная почта</label>
@@ -56,32 +54,10 @@
                 </li>
                 <li>
                     <a href="">Пусто</a>
-                    <form method="post" class="visually-hidden">
-                        <ul>
-                            <li>
-                                <p>
-                                    <button type="button">Удалить из корзины</button>
-                                    <p>Пломбир с апельсиновым джемом</p>
-                                    <p>1,5 кг х 200 руб.</p>
-                                    <p>300 руб.</p>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <button type="button">Удалить из корзины</button>
-                                    <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                                    <p>1,5 кг х 300 руб.</p>
-                                    <p>450 руб.</p>
-                                </p>
-                            </li>
-                        </ul>
-                        <p>Итого: 750 руб.</p>
-                        <a href="">Оформить заказ</a>
-                    </form>
                 </li>
             </ul>
         </nav>
-        <p>C 10 до 20, ежедневно<br> 8 812 450-25-25</p>
+        <p><span class="header-worktime">C 10 до 20, ежедневно</span><br><span class="header-telephone">8 812 450-25-25</span></p>
     </header>
     <main>
 
@@ -172,8 +148,9 @@
                         <img src="img/item-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     </p>
                     <p class="catalog-item-price">
-                        <b>310 ₽/кг</b>
+                        310 ₽<span>/кг</span>
                     </p>
+                    <button class="button visually-hidden" type="button">Быстрый просмотр</button>
                 </li>
                 <li class="catalog-item">
                     <h3>
@@ -183,7 +160,7 @@
                         <img src="img/item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                     </p>
                     <p class="catalog-item-price">
-                        <b>380 ₽/кг</b>
+                        380 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -194,7 +171,7 @@
                         <img src="img/item-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                     </p>
                     <p class="catalog-item-price">
-                        <b>355 ₽/кг</b>
+                        355 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -205,7 +182,7 @@
                         <img src="img/item-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     </p>
                     <p class="catalog-item-price">
-                        <b>415 ₽/кг</b>
+                        415 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -216,7 +193,7 @@
                         <img src="img/item-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
                     </p>
                     <p class="catalog-item-price">
-                        <b>325 ₽/кг</b>
+                        325 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -227,7 +204,7 @@
                         <img src="img/item-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники ">
                     </p>
                     <p class="catalog-item-price">
-                        <b>410 ₽/кг</b>
+                        410 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -238,7 +215,7 @@
                         <img src="img/item-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
                     </p>
                     <p class="catalog-item-price">
-                        <b>375 ₽/кг</b>
+                        375 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -249,7 +226,7 @@
                         <img src="img/item-8.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     </p>
                     <p class="catalog-item-price">
-                        <b>320 ₽/кг</b>
+                        320 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -260,7 +237,7 @@
                         <img src="img/item-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                     </p>
                     <p class="catalog-item-price">
-                        <b>440 ₽/кг</b>
+                        440 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -271,7 +248,7 @@
                         <img src="img/item-10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
                     </p>
                     <p class="catalog-item-price">
-                        <b>435 ₽/кг</b>
+                        435 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -282,7 +259,7 @@
                         <img src="img/item-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
                     </p>
                     <p class="catalog-item-price">
-                        <b>355 ₽/кг</b>
+                        355 ₽<span>/кг</span>
                     </p>
                 </li>
                 <li class="catalog-item">
@@ -293,7 +270,7 @@
                         <img src="img/item-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
                     </p>
                     <p class="catalog-item-price">
-                        <b>420 ₽/кг</b>
+                        420 ₽<span>/кг</span>
                     </p>
                 </li>
             </ul>
@@ -306,29 +283,27 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <div>
+    <footer class="main-footer">
+        <div class="footer-social">
             <ul>
-                <li><a href="https://twitter.com/htmlacademy_ru">Твиттер</a></li>
-                <li><a href="https://www.instagram.com/htmlacademy/">Инстаграм</a></li>
-                <li><a href="https://www.facebook.com/htmlacademy">Фейсбук</a></li>
-                <li><a href="https://vk.com/htmlacademy">Вконтакте</a></li>
+                <li><a class="social-button" href="https://twitter.com/htmlacademy_ru">Твиттер</a></li>
+                <li><a class="social-button" href="https://www.instagram.com/htmlacademy/">Инстаграм</a></li>
+                <li><a class="social-button" href="https://www.facebook.com/htmlacademy">Фейсбук</a></li>
+                <li><a class="social-button" href="https://vk.com/htmlacademy">Вконтакте</a></li>
             </ul>
         </div>
-        <div>
+        <div class="footer-information">
             <ul>
-                <li><a href="">Для поставщиков</a></li>
+                <li class="for-providers"><a href="">Для поставщиков</a></li>
                 <li><a href="">О производстве</a></li>
                 <li><a href="">Наши документы</a></li>
-                <li><a href="">Экологиеские стандарты</a></li>
+                <li><a href="">Экологические стандарты</a></li>
             </ul>
         </div>
-        <div>
+        <p class="footer-copyright">
             <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип htmlacademy"></a>
-            <p>
-                Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
-            </p>
-        </div>
+            Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019
+        </p>
     </footer>
 </body>
 
