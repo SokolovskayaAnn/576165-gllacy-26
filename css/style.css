@@ -7,6 +7,11 @@ body {
     font-weight: 700;
     color: #ffffff;
     background-color: #849d8f;
+    /*временно для сетки*/
+    background-image: url("../img/gllacy-index.jpg");
+    background-size: 1200px auto;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -20,6 +25,11 @@ a:active {
     color: #ffbc9e;
 }
 
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -31,26 +41,87 @@ a:active {
 .main-navigation {
     font-size: 16px;
     line-height: 18px;
+    font-weight: 700;
     color: #ffffff;
-    background-color: #849d8f;
 }
 
 .site-navigation,
 .user-navigation {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation a,
+.user-navigation a {
+    color: #ffffff;
+    display: block;
+    border-radius: 25px;
 }
 
 .site-navigation a {
-    color: #ffffff;
-    text-decoration: underline;
+    padding: 7px 14px;
+    margin: 13px 0px;
 }
 
 .user-navigation a {
-    color: #ffffff;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 9px 17px;
+    margin: 13px 0px;
+    margin-left: 8px;
 }
 
-.user-navigation li {
-    background-color: rgba(255, 255, 255, 0.2);
+.user-navigation .basket-link,
+.user-navigation .login-link {
+    position: relative;
+    padding-left: 45px;
+}
+
+.user-navigation .search-line {
+    position: relative;
+    padding: 16px;
+    border-radius: 50%;
+}
+
+.basket-link::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 17px;
+    width: 21px;
+    height: 20px;
+    background-image: url("../img/basket.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.login-link::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 17px;
+    width: 20px;
+    height: 19px;
+    background-image: url("../img/login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.search-line::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    width: 20px;
+    height: 19px;
+    background-image: url("../img/loupe.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .site-navigation a:hover,
@@ -65,13 +136,17 @@ a:active {
 .header-worktime {
     font-size: 14px;
     font-weight: 700;
-    line-height: 16px;
+    line-height: 14px;
+    text-align: end;
+    vertical-align: top;
 }
 
 .header-telephone {
     font-size: 22px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 34px;
+    text-align: end;
+    vertical-align: bottom;
 }
 
 .advantages {
@@ -273,4 +348,44 @@ form input:focus {
 .pagination-item-current a {
     color: #323232;
     background-color: #ffffff;
+}
+
+
+/*сетка*/
+
+.main-header {
+    margin-top: 10px;
+}
+
+.main-header-logo {
+    width: 154px;
+    height: 64px;
+}
+
+.main-navigation-wrapper {
+    width: 100%;
+    margin-left: 9px;
+}
+
+.container {
+    display: flex;
+    width: 1146px;
+    margin: 0 auto;
+    padding: 0 27px;
+}
+
+.container .main-navigation-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-worktime,
+.header-telephone {
+    margin: 0;
+    padding: 0;
+}
+
+.header-contacts {
+    width: 168px;
+    margin-left: auto;
 }
