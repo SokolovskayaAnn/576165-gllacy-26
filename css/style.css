@@ -323,7 +323,7 @@ a:active {
     .banners {
         display: flex;
         justify-content: space-between;
-        margin-top: 40px;
+        margin: 40px auto;
     }
     
     .banner1,
@@ -368,6 +368,85 @@ a:active {
         background-color: #482b1a;
         background-image: url("../img/bg-chocolate.jpg");
         background-position: 89% 47%;
+    }
+    /***** *****/
+    /***** Хиты *****/
+    
+    .catalog-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .catalog-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 267px;
+        height: 324px;
+        /* padding: 7px 13px; */
+        /*Крайние наведение ?*/
+        /* padding-right: 26px; */
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .catalog-item p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .catalog-item h3 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        /*подеркивание?*/
+    }
+    
+    .catalog-item .catalog-item-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 61px;
+        height: 61px;
+        background-image: url("../img/hit.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    
+    .catalog-item-price {
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 45px;
+        position: absolute;
+        top: 209px;
+        left: -2px;
+        text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+    }
+    
+    .catalog-item-price span {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 45px;
+    }
+    
+    .catalog-item a {
+        display: none;
+    }
+    
+    .catalog-item:hover {
+        /* z-index: 5; */
+        background-color: rgba(255, 255, 255, 0.2);
+        /*тень*/
     }
     /***** *****/
     
@@ -509,34 +588,6 @@ a:active {
         font-size: 14px;
         font-weight: 400;
         line-height: 16px;
-    }
-    
-    .catalog-list {
-        list-style: none;
-    }
-    
-    .catalog-item h3 {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
-        text-decoration: underline;
-    }
-    
-    .catalog-item-price {
-        font-size: 45px;
-        font-weight: 700;
-        line-height: 45px;
-    }
-    
-    .catalog-item-price span {
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 45px;
-    }
-    
-    .catalog-item:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        /*тень*/
     }
     
     .pagination-list {
