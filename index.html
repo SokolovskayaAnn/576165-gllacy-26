@@ -74,7 +74,9 @@
                 </div>
 
             </header>
-            <main>
+        </div>
+        <main>
+            <div class="container">
                 <h1 class="visually-hidden">GllacyShop</h1>
                 <section class="slider">
                     <h2 class="visually-hidden">Баннер</h2>
@@ -173,29 +175,30 @@
                 </div>
 
                 <section class="advantages">
-                    <p class="about">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
                     <h2 class="visually-hidden">Преимущества</h2>
+                    <p class="about">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
                     <ul class="advantages-list">
                         <li class="advantage-item">
                             <h3 class="visually-hidden">Собственное производство</h3>
-                            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-                        </li>
-                        <li class="advantage-item">
-                            <h3 class="visually-hidden">Натуральные ингредиенты</h3>
-                            <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-                            </p>
+                            <p class="item-ice-cream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
                         </li>
                         <li class="advantage-item">
                             <h3 class="visually-hidden">Проверенные поставщики</h3>
-                            <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                            <p class="item-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
                         </li>
                         <li class="advantage-item">
+                            <h3 class="visually-hidden">Натуральные ингредиенты</h3>
+                            <p class="item-eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+                            </p>
+                        </li>
+
+                        <li class="advantage-item">
                             <h3 class="visually-hidden">Надежная доставка</h3>
-                            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+                            <p class="item-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
                         </li>
                     </ul>
                 </section>
-                <div class="container">
+                <div class="news-container">
                     <section class="news">
                         <h2>Новое в нашем блоге</h2>
                         <p><a href="">10 способов сервировки
@@ -205,51 +208,52 @@
                     </section>
                     <section class="mail">
                         <h2 class="visually-hidden">Рассылка</h2>
-                        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-                        <form class="form">
+                        <p class="mail-info">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+                        <form class="mail-form">
                             <p>
                                 <label class="visually-hidden" for="user-mailing-address">Электронная почта</label>
                                 <input id="user-mailing-address" type="text" name="user-mailing-address" placeholder="email@example.com">
                             </p>
-                            <button class="button" type="submit">Отправить</button>
+                            <button class="button mail-send" type="submit">Отправить</button>
                         </form>
                     </section>
                 </div>
-                <div>
-                    <div>
-                        <p>Адрес главного офиса и офлайн-магазина:</p>
-                        <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-                    </div>
-                    <div>
-                        <p>Для заказов по телефону:</p>
-                        <p>8 812 450-25-25</p>
-                        <p>(с 10 до 20 ежедневно)</p>
-                        <button type="button">Форма обратной связи</button>
+            </div>
+            <div class="map-container">
+                <div class="feedback-container">
+                    <p>Адрес главного офиса и офлайн-магазина:</p>
+                    <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
 
-                        <form method="post" class="visually-hidden">
-                            <p>Мы обязательно вам ответим!</p>
-                            <button type="button">Закрыть</button>
-                            <p>
-                                <label class="visually-hidden" for="user-name">Имя</label>
-                                <input id="user-name" type="text" name="user-name" placeholder="Как вас зовут?">
-                            </p>
-                            <p>
-                                <label class="visually-hidden" for="email">Электронная почта</label>
-                                <input id="email" type="text" name="email" placeholder="Ваша почта для ответа?">
-                            </p>
-                            <p>
-                                <label class="visually-hidden" for="user-text">Ваше сообщение</label>
-                                <textarea id="user-text" type="text" name="text" placeholder="Напишите что-нибудь..." rows="5" cols="30"></textarea>
-                            </p>
-                            <button type="submit">Отправить</button>
+                    <p>Для заказов по телефону:</p>
+                    <p>8 812 450-25-25</p>
+                    <p>(с 10 до 20 ежедневно)</p>
+                    <button class="button" type="button">Форма обратной связи</button>
 
-                        </form>
-                    </div>
+                    <form method="post" class="visually-hidden">
+                        <p>Мы обязательно вам ответим!</p>
+                        <button type="button">Закрыть</button>
+                        <p>
+                            <label class="visually-hidden" for="user-name">Имя</label>
+                            <input id="user-name" type="text" name="user-name" placeholder="Как вас зовут?">
+                        </p>
+                        <p>
+                            <label class="visually-hidden" for="email">Электронная почта</label>
+                            <input id="email" type="text" name="email" placeholder="Ваша почта для ответа?">
+                        </p>
+                        <p>
+                            <label class="visually-hidden" for="user-text">Ваше сообщение</label>
+                            <textarea id="user-text" type="text" name="text" placeholder="Напишите что-нибудь..." rows="5" cols="30"></textarea>
+                        </p>
+                        <button class="button" type="submit">Отправить</button>
 
-                    <img src="img/map.jpg" width="1250" height="640" alt="Адрес главного офиса и офлайн-магазина на карте">
+                    </form>
                 </div>
 
-            </main>
+                <!-- <img src="img/map.jpg" width="1250" height="640" alt="Адрес главного офиса и офлайн-магазина на карте">-->
+            </div>
+
+        </main>
+        <div class="container">
             <footer class="main-footer">
                 <div class="footer-social">
                     <ul>
