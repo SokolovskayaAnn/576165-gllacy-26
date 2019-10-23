@@ -8,7 +8,7 @@ body {
     color: #ffffff;
     background-color: #849d8f;
     /*временно для сетки*/
-    /* background-image: url("../img/gllacy-index.jpg"); 
+    /* background-image: url("../img/gllacy-index.jpg");
     background-size: 1200px auto;
     background-position: 50% 0%;
     background-repeat: no-repeat;*/
@@ -59,7 +59,7 @@ body {
     display: flex;
 }
 
-.container .main-navigation-wrapper {
+.main-navigation-wrapper {
     display: flex;
     justify-content: space-between;
 }
@@ -80,23 +80,25 @@ body {
     padding: 0;
 }
 
-.site-navigation .sub-menu {
+.sub-menu {
     display: none;
 }
 
-.site-navigation .link,
+.site-navigation-link,
 .user-navigation .link {
     color: #ffffff;
     display: block;
     border-radius: 25px;
+
+
 }
 
-.site-navigation .link {
+.site-navigation-link {
     padding: 7px 14px;
     margin: 13px 0px;
 }
 
-.user-navigation .link {
+.user-navigation-link {
     font-size: 14px;
     line-height: 14px;
     font-weight: 500;
@@ -106,13 +108,13 @@ body {
     margin-left: 8px;
 }
 
-.user-navigation .basket-link,
-.user-navigation .login-link {
+.basket-link,
+.login-link {
     position: relative;
     padding-left: 45px;
 }
 
-.user-navigation .search-line {
+.search-line {
     position: relative;
     padding: 16px;
     border-radius: 50%;
@@ -154,10 +156,10 @@ body {
     background-position: 40% 0;
 }
 
-.site-navigation .link:hover,
-.site-navigation .link:focus,
-.user-navigation .link:hover,
-.user-navigation .link:focus {
+.site-navigation-link:hover,
+.site-navigation-link:focus,
+.user-navigation-link:hover,
+.user-navigation-link:focus {
     text-decoration: none;
     background-color: #f7f6f3;
     color: #323232;
@@ -366,16 +368,14 @@ body {
     position: relative;
 }
 
-.banner1 .banner-header,
-.banner2 .banner-header {
+.banner-header {
     font-size: 35px;
     font-weight: 700;
     line-height: 14px;
     padding-left: 20px;
 }
 
-.banner1 .banner-text,
-.banner2 .banner-text {
+.banner-text {
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
@@ -383,8 +383,7 @@ body {
     padding-left: 20px;
 }
 
-.banner1 .button,
-.banner2 .button {
+.banner-button {
     position: absolute;
     right: 21px;
     bottom: 24px;
@@ -438,7 +437,7 @@ body {
     padding: 0;
 }
 
-.catalog-item .item-header {
+.item-header {
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
@@ -448,9 +447,19 @@ body {
     position: absolute;
     bottom: 0;
     /*подчеркивание?*/
+
+
+}
+.underline{
+    text-decoration: none;
+
+	background-repeat: no-repeat;
+	background-position: center bottom 0px;
+	background-size: 100% 1px;
+	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.0),rgba(255, 255, 255, 1));
 }
 
-.catalog-item .catalog-item-image::before {
+.catalog-item-image::before {
     content: "";
     position: absolute;
     top: 0;
@@ -478,7 +487,7 @@ body {
     line-height: 45px;
 }
 
-.catalog-item .link {
+.catalog-item-link {
     display: none;
 }
 
@@ -501,18 +510,20 @@ body {
     margin-bottom: 40px;
 }
 
-.advantages p,
-.advantages .advantages-list {
+
+.advantages-list,
+.advantages-list p{
     margin: 0;
     padding: 0;
 }
 
-.advantages .about {
+.advantages-description{
     font-size: 24px;
     font-weight: 600;
     line-height: 30px;
     letter-spacing: 0px;
     color: #323232;
+    margin:0;
     padding-top: 25px;
     padding-bottom: 21px;
     padding-left: 20px;
@@ -595,7 +606,7 @@ body {
     border-radius: 15px;
 }
 
-.news .news-header {
+.news-header {
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
@@ -611,7 +622,7 @@ body {
     padding-left: 20px;
 }
 
-.news .link {
+.news-link {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
@@ -619,9 +630,9 @@ body {
     color: #323232;
 }
 
-.news .link:hover,
-.news .link:focus,
-.news .link:active {
+.news-link:hover,
+.news-link:focus,
+.news-link:active {
     color: #e84d37;
 }
 
@@ -637,7 +648,7 @@ body {
     align-items: center;
 }
 
-.mail .mail-info {
+.mail-info {
     width: 507px;
     font-size: 16px;
     font-weight: 400;
@@ -679,7 +690,7 @@ body {
     border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
-.mail-form .mail-send {
+.mail-send-button {
     padding: 12px 19px;
 }
 
@@ -714,34 +725,43 @@ body {
     flex-direction: column;
 }
 
-.feedback-container p {
-    margin: 0;
-    padding: 0;
-    margin-left: 25px;
-}
 
-.feedback-container .feedback-address-info {
+.feedback-address-info {
     margin-top: 29px;
     margin-bottom: 18px;
+    margin-left: 25px;
     line-height: 20px;
 }
 
-.feedback-container .feedback-address {
+.feedback-address {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
-}
+    margin-top:0;
+    margin-bottom: 0;
 
-.feedback-container .feedback-telephone {
+}
+.feedback-telephone-info{
+    margin-top:0;
+    margin-bottom: 0;
+    margin-left: 25px;
+}
+.feedback-telephone {
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
+    margin-top:0;
+    margin-bottom: 0;
+
 }
 
-.feedback-container .feedback-worktime {
+.feedback-worktime {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
+    margin-top:0;
+    margin-bottom: 0;
+
 }
 
 .feedback-button {
@@ -759,7 +779,7 @@ body {
     margin-right: 235px;
 }
 
-.footer-social .footer-social-list {
+.footer-social-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -769,7 +789,7 @@ body {
     list-style: none;
 }
 
-.footer-social .social-button {
+.social-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -783,29 +803,29 @@ body {
     background-position: 50% 50%;
 }
 
-.footer-social .social-button:hover,
-.footer-social .social-button:focus {
+.social-button:hover,
+.social-button:focus {
     opacity: 1;
 }
 
-.footer-social .social-button:active {
+.social-button:active {
     opacity: 0.8;
     border: 3px solid rgba(255, 255, 255, 0.7);
 }
 
-.footer-social .twitter-button {
+.twitter-button {
     background-image: url("../img/twitter.svg");
 }
 
-.footer-social .instagram-button {
+.instagram-button {
     background-image: url("../img/instagram.svg");
 }
 
-.footer-social .facebook-button {
+.facebook-button {
     background-image: url("../img/fb.svg");
 }
 
-.footer-social .vk-button {
+.vk-button {
     background-image: url("../img/vk.svg");
 }
 
@@ -814,10 +834,10 @@ body {
     font-weight: 400;
     line-height: 18px;
     list-style: none;
-    padding: 33px 0;
+    margin: 33px 0;
 }
 
-.footer-information .footer-information-list {
+.footer-information-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -869,6 +889,10 @@ body {
 }
 
 .breadcrumbs {
+    display:flex;
+    position:
+    margin:0;
+    padding:0;
     list-style: none;
 }
 
