@@ -20,7 +20,14 @@ body {
 }
 
 .link:hover {
-    color: #ffbc9e;
+    color: rgb(255, 188, 158);
+}
+
+.underline:hover {
+    background-repeat: no-repeat;
+    background-position: center bottom 0px;
+    background-size: 100% 1px;
+    background-image: linear-gradient(to top, rgba(255, 188, 158, 0.2), rgba(255, 188, 158, 0.2));
 }
 
 .img {
@@ -89,8 +96,6 @@ body {
     color: #ffffff;
     display: block;
     border-radius: 25px;
-
-
 }
 
 .site-navigation-link {
@@ -437,26 +442,35 @@ body {
     padding: 0;
 }
 
+
+/*для подеркивания*/
+
+.item-header-wrap {
+    text-align: center;
+    order: 1;
+    margin-top: 5px;
+}
+
 .item-header {
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
-    text-align: center;
     margin: 0;
     padding: 0;
-    position: absolute;
-    bottom: 0;
-    /*подчеркивание?*/
-
-
+    /*подчеркивание*/
+    display: inline;
+    background-repeat: no-repeat;
+    background-position: center bottom 0px;
+    background-size: 100% 1px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
 }
-.underline{
-    text-decoration: none;
 
-	background-repeat: no-repeat;
-	background-position: center bottom 0px;
-	background-size: 100% 1px;
-	background-image: linear-gradient(to top, rgba(255, 255, 255, 0.0),rgba(255, 255, 255, 1));
+.underline {
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: center bottom 0px;
+    background-size: 100% 1px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
 }
 
 .catalog-item-image::before {
@@ -510,20 +524,19 @@ body {
     margin-bottom: 40px;
 }
 
-
 .advantages-list,
-.advantages-list p{
+.advantages-list p {
     margin: 0;
     padding: 0;
 }
 
-.advantages-description{
+.advantages-description {
     font-size: 24px;
     font-weight: 600;
     line-height: 30px;
     letter-spacing: 0px;
     color: #323232;
-    margin:0;
+    margin: 0;
     padding-top: 25px;
     padding-bottom: 21px;
     padding-left: 20px;
@@ -725,7 +738,6 @@ body {
     flex-direction: column;
 }
 
-
 .feedback-address-info {
     margin-top: 29px;
     margin-bottom: 18px;
@@ -737,31 +749,30 @@ body {
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 0;
-
 }
-.feedback-telephone-info{
-    margin-top:0;
+
+.feedback-telephone-info {
+    margin-top: 0;
     margin-bottom: 0;
     margin-left: 25px;
 }
+
 .feedback-telephone {
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 0;
-
 }
 
 .feedback-worktime {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 0;
-
 }
 
 .feedback-button {
@@ -889,10 +900,9 @@ body {
 }
 
 .breadcrumbs {
-    display:flex;
-    position:
-    margin:0;
-    padding:0;
+    display: flex;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -904,20 +914,32 @@ body {
 
 .pagination-list {
     list-style: none;
+    display: flex;
+    width: 125px;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
 }
 
 .pagination-item {
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
+    padding-right: 2px;
 }
 
-.pagination-item a:hover {
+.pagination-link {
+    border-radius: 50%;
+    padding: 3px 8px;
+}
+
+.pagination-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
 }
 
-.pagination-item-current a {
+.pagination-item-current .pagination-link {
     color: #323232;
     background-color: #ffffff;
 }
