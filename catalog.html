@@ -23,11 +23,11 @@
                                 <li>
                                     <a class="link site-navigation-link catalog-link current-navigation-link" href="catalog.html">Каталог</a>
                                     <ul class="sub-menu">
-                                        <li><a class=" sub-menu-link sub-menu-special" href="">Новинки</a></li>
-                                        <li><a class=" sub-menu-link" href="">Сливочное</a></li>
-                                        <li><a class=" sub-menu-link" href="">Щербеты</a></li>
-                                        <li><a class=" sub-menu-link" href="">Фруктовый лед</a></li>
-                                        <li><a class=" sub-menu-link" href="">Мелорин</a></li>
+                                        <li><a class="sub-menu-link sub-menu-special" href="#">Новинки</a></li>
+                                        <li><a class="sub-menu-link sub-menu-current-link" href="#">Сливочное</a></li>
+                                        <li><a class="sub-menu-link" href="#">Щербеты</a></li>
+                                        <li><a class="sub-menu-link" href="#">Фруктовый лед</a></li>
+                                        <li><a class="sub-menu-link" href="#">Мелорин</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="link site-navigation-link" href="delivery.html">Доставка и оплата</a></li>
@@ -86,18 +86,20 @@
                         <div class="filter-row">
                             <div class="filter-column">
                                 <label for="sorting" class="filter-name">Сортировка:</label>
-                                <select class="form-select" id="sorting" name="sorting">
-                                    <option class="select-option">по популярности</option>
-                                    <option class="select-option">сначала недорогие</option>
-                                    <option class="select-option">сначала дорогие</option>
-                                    <option class="select-option">по жирности</option>
+                                <div class="form-select-wrap">
+                                    <select class="form-select" id="sorting" name="sorting">
+                                    <option class="select-option">&nbsp;&nbsp;&nbsp;&nbsp;по популярности</option>
+                                    <option class="select-option">&nbsp;&nbsp;&nbsp;&nbsp;сначала недорогие</option>
+                                    <option class="select-option">&nbsp;&nbsp;&nbsp;&nbsp;сначала дорогие</option>
+                                    <option class="select-option">&nbsp;&nbsp;&nbsp;&nbsp;по жирности</option>
                                 </select>
+                                </div>
                             </div>
                             <div class="filter-column">
                                 <p class="filter-name">Цена: 100 руб. - 500 руб.</p>
                                 <div class="range">
-                                    <div class="range-line">
-                                        <div class="range-center-line">
+                                    <div class="range-scale">
+                                        <div class="range-bar">
                                             <span class="range-min"><img src="img/filter-button.svg" width="20" height="23" alt="Ползунок минимальной цены"></span>
 
                                             <span class="range-max"><img src="img/filter-button.svg" width="20" height="23" alt="Ползунок максимальной цены"></span>
@@ -118,7 +120,7 @@
                                         <label for="fat2">до 10%</label>
                                     </li>
                                     <li class="filter-option radio-option">
-                                        <input type="radio" id="fat3" name="fat" value="30" disabled>
+                                        <input type="radio" id="fat3" name="fat" value="30">
                                         <label for="fat3">до 30%</label>
                                     </li>
                                     <li class="filter-option radio-option">
@@ -142,7 +144,7 @@
                                         <label for="filler2">сахарные присыпки</label>
                                     </li>
                                     <li class="filter-option checkbox-option">
-                                        <input type="checkbox" id="filler3" name="filler3" value="fruit" disabled>
+                                        <input type="checkbox" id="filler3" name="filler3" value="fruit">
                                         <label for="filler3">фрукты</label>
                                     </li>
                                     <li class="filter-option checkbox-option">
