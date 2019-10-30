@@ -1063,6 +1063,8 @@ body {
 }
 
 .form-select {
+    display:inline-block;
+    padding-left:15px;
     width: 193px;
     height: 36px;
     border: none;
@@ -1073,6 +1075,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
 }
 
 .form-select-wrap .form-select:hover {
@@ -1115,22 +1118,23 @@ body {
     position: absolute;
     left: 22px;
 }
-
-.range-min {
+.range-toggle{
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px 0 #ababab;
+    cursor: pointer;
     position: absolute;
     top: -7px;
+}
+.range-toggle-min {
     left: -10px;
 }
 
-.range-max {
-    position: absolute;
-    top: -7px;
+.range-toggle-max {
     right: -10px;
-}
-
-.range-min:hover,
-.range-max:hover {
-    cursor: pointer;
 }
 
 .filters-form fieldset {
