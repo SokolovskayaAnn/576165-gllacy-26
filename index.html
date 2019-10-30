@@ -37,27 +37,33 @@
                             <ul class="user-navigation">
                                 <li>
                                     <a class="link search-line user-navigation-link" href=""></a>
-                                    <form>
+                                    <form class="form search-form">
                                         <p>
                                             <label class="visually-hidden" for="search-field">Строка поиска</label>
-                                            <input class="visually-hidden" id="search-field" type="search" name="search-field" value="" placeholder="Что ищем?">
+                                            <input class="form-input" id="search-field" type="search" name="search-field" value="" placeholder="Что ищем?">
                                         </p>
                                     </form>
                                 </li>
                                 <li>
                                     <a class="link login-link user-navigation-link" href="">Вход</a>
-                                    <form method="post" class="visually-hidden">
+                                    <form class="form login-form" method="post">
                                         <p>
                                             <label class="visually-hidden" for="user-email">Электронная почта</label>
-                                            <input id="user-email" type="text" name="user-email" placeholder="Электронная почта">
+                                            <input class="form-input" id="user-email" type="text" name="user-email" placeholder="Электронная почта">
                                         </p>
                                         <p>
                                             <label class="visually-hidden" for="user-password">Пароль</label>
-                                            <input id="user-password" type="password" name="password" placeholder="Пароль">
+                                            <input class="form-input" id="user-password" type="password" name="password" placeholder="Пароль">
                                         </p>
-                                        <button type="submit">Войти</button>
-                                        <a class="link" href="">Забыли пароль?</a>
-                                        <a class="link" href="">Новая регистрация</a>
+                                        <div class="login-form-row">
+                                            <button class="button form-login-button" type="submit">Войти</button>
+                                            <div class="login-form-column">
+                                                <a class="link form-login-link" href="">Забыли пароль?</a>
+                                                <a class="link form-login-link" href="">Новая регистрация</a>
+                                            </div>
+                                        </div>
+
+
                                     </form>
                                 </li>
                                 <li>
