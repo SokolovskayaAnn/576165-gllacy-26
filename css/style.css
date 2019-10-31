@@ -141,6 +141,7 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
 .basket-link:hover:before {
     text-decoration: none;
     background-color: #f7f6f3;
@@ -148,8 +149,8 @@ body {
     background-image: url("../img/basket-red.svg");
     background-repeat: no-repeat;
     background-position: 24% 49%;
-
 }
+
 .login-link {
     position: relative;
     padding-left: 46px;
@@ -166,6 +167,7 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
 .login-link:hover:before {
     text-decoration: none;
     background-color: #f7f6f3;
@@ -173,8 +175,8 @@ body {
     background-image: url("../img/login-black.svg");
     background-repeat: no-repeat;
     background-position: 24% 49%;
-
 }
+
 .search-line {
     position: relative;
     padding: 16px;
@@ -192,6 +194,7 @@ body {
     background-repeat: no-repeat;
     background-position: 40% 0;
 }
+
 .search-line:hover:before {
     text-decoration: none;
     background-color: #f7f6f3;
@@ -199,8 +202,8 @@ body {
     background-image: url("../img/loupe-black.svg");
     background-repeat: no-repeat;
     background-position: 24% 49%;
-
 }
+
 .form {
     position: absolute;
     font-size: 14px;
@@ -268,30 +271,80 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-.basket-form{
+
+.basket-form-row {
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.basket-form {
     display: none;
-    width: 500px;
-    height: 240px;
+    width: 509px;
+    height: 242px;
     top: 50px;
     right: 0;
-    padding: 0px 15px;
+    padding: 0 15px;
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #323232;
 }
-.basket-item-name{
-    width: 275px;
-    position:relative;
-    padding-left: 20px;
+
+.basket-item {
+    width: 265px;
+    position: relative;
+    padding-left: 26px;
+    display: flex;
+    align-items: baseline;
 }
-.basket-item-name::before{
+
+.basket-item::before {
     content: "";
     position: absolute;
-    top: 6px;
+    top: 3px;
     left: 0;
     width: 11px;
     height: 11px;
     background-image: url("../img/cross-small.svg");
     background-repeat: no-repeat;
     background-position: 40% 0;
+}
 
+.basket-item-img {
+    position: relative;
+}
+
+.basket-item-img img {
+    position: absolute;
+    top: -20px;
+}
+
+.basket-item-name {
+    padding-left: 48px;
+}
+
+.basket-item-price {
+    color: #999999;
+}
+
+.basket-form .underline {
+    background-position: center bottom 0px;
+    background-size: 100% 1px;
+    background-image: linear-gradient(to top, #cacac7, #cacac7);
+}
+
+.basket-sum {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    align-self: flex-end;
+}
+
+.basket-form .form-basket-button {
+    align-self: flex-end;
+    padding: 8px 14px;
+    border-radius: 25px;
 }
 
 .site-navigation-link:hover,
@@ -302,16 +355,20 @@ body {
     background-color: #f7f6f3;
     color: #323232;
 }
-.user-navigation-link:hover + .login-form{
-    display:flex;
+
+.user-navigation-link:hover+.login-form {
+    display: flex;
 }
-.user-navigation-link:hover + .search-form{
-    display:flex;
+
+.user-navigation-link:hover+.search-form {
+    display: flex;
 }
-.user-navigation-link:hover + .basket-form{
-    display:flex;
+
+.user-navigation-link:hover+.basket-form {
+    display: flex;
 }
-.site-navigation > li {
+
+.site-navigation>li {
     position: relative;
     display: inline-block;
 }
@@ -377,9 +434,6 @@ body {
 .current-navigation-link::after {
     display: none;
 }
-
-
-
 
 .header-contacts {
     width: 168px;
