@@ -21,10 +21,10 @@
                         <div class="main-navigation-wrapper">
                             <ul class="site-navigation">
                                 <li>
-                                    <a class="link site-navigation-link catalog-link current-navigation-link" href="catalog.html">Каталог</a>
+                                    <a class="link site-navigation-link catalog-link current-navigation-link" href="#">Каталог</a>
                                     <ul class="sub-menu">
                                         <li><a class="sub-menu-link sub-menu-special" href="#">Новинки</a></li>
-                                        <li><a class="sub-menu-link sub-menu-current-link" href="#">Сливочное</a></li>
+                                        <li><a class="sub-menu-link sub-menu-current-link" href="catalog.html">Сливочное</a></li>
                                         <li><a class="sub-menu-link" href="#">Щербеты</a></li>
                                         <li><a class="sub-menu-link" href="#">Фруктовый лед</a></li>
                                         <li><a class="sub-menu-link" href="#">Мелорин</a></li>
@@ -36,31 +36,55 @@
                             <ul class="user-navigation">
                                 <li>
                                     <a class="link search-line user-navigation-link" href=""></a>
-                                    <form>
+                                    <form class="form search-form">
                                         <p>
                                             <label class="visually-hidden" for="search-field">Строка поиска</label>
-                                            <input class="visually-hidden" id="search-field" type="search" name="search-field" value="" placeholder="Что ищем?">
+                                            <input class="form-input" id="search-field" type="search" name="search-field" value="" placeholder="Что ищем?">
                                         </p>
                                     </form>
                                 </li>
                                 <li>
                                     <a class="link login-link user-navigation-link" href="">Вход</a>
-                                    <form method="post" class="visually-hidden">
+                                    <form class="form login-form" method="post">
                                         <p>
                                             <label class="visually-hidden" for="user-email">Электронная почта</label>
-                                            <input id="user-email" type="text" name="user-email" placeholder="Электронная почта">
+                                            <input class="form-input" id="user-email" type="text" name="user-email" placeholder="Электронная почта">
                                         </p>
                                         <p>
                                             <label class="visually-hidden" for="user-password">Пароль</label>
-                                            <input id="user-password" type="password" name="password" placeholder="Пароль">
+                                            <input class="form-input" id="user-password" type="password" name="password" placeholder="Пароль">
                                         </p>
-                                        <button type="submit">Войти</button>
-                                        <a class="link" href="">Забыли пароль?</a>
-                                        <a class="link" href="">Новая регистрация</a>
+                                        <div class="login-form-row">
+                                            <button class="button form-login-button" type="submit">Войти</button>
+                                            <div class="login-form-column">
+                                                <a class="link form-login-link" href="">Забыли пароль?</a>
+                                                <a class="link form-login-link" href="">Новая регистрация</a>
+                                            </div>
+                                        </div>
                                     </form>
                                 </li>
                                 <li>
                                     <a class="link basket-link user-navigation-link" href="">Пусто</a>
+                                    <form class="form basket-form">
+                                        <div class="basket-form-row">
+                                            <p class="basket-item-img"><img src="img/item-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></p>
+                                            <div class="basket-item">
+                                                <p class="basket-item-name">Пломбир с апельсиновым джемом</p>
+                                                <p>1,5 кг х <span class="basket-item-price">200 руб.</span></p>
+                                                <p>300 руб.</p>
+                                            </div>
+                                        </div>
+                                        <div class="basket-form-row underline">
+                                            <p class="basket-item-img"><img src="img/item-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></p>
+                                            <div class="basket-item">
+                                                <p class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</p>
+                                                <p>1,5 кг х <span class="basket-item-price">300 руб.</span></p>
+                                                <p>450 руб.</p>
+                                            </div>
+                                        </div>
+                                        <p class="basket-sum">Итого: 750 руб.</p>
+                                        <button class="button form-basket-button">Оформить заказ</button>
+                                    </form>
                                 </li>
                             </ul>
                         </div>
@@ -158,7 +182,6 @@
                             </fieldset>
                             <button class="filter-button" type="submit">Применить</button>
                         </div>
-
                     </form>
                 </section>
                 <section class="catalog underline">

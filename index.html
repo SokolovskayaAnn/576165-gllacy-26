@@ -22,10 +22,10 @@
                         <div class="main-navigation-wrapper">
                             <ul class="site-navigation">
                                 <li>
-                                    <a class="link site-navigation-link catalog-link" href="catalog.html">Каталог</a>
+                                    <a class="link site-navigation-link catalog-link" href="#">Каталог</a>
                                     <ul class="sub-menu">
                                         <li><a class="sub-menu-link sub-menu-special" href="#">Новинки</a></li>
-                                        <li><a class="sub-menu-link" href="#">Сливочное</a></li>
+                                        <li><a class="sub-menu-link" href="catalog.html">Сливочное</a></li>
                                         <li><a class="sub-menu-link" href="#">Щербеты</a></li>
                                         <li><a class="sub-menu-link" href="#">Фруктовый лед</a></li>
                                         <li><a class="sub-menu-link" href="#">Мелорин</a></li>
@@ -62,28 +62,26 @@
                                                 <a class="link form-login-link" href="">Новая регистрация</a>
                                             </div>
                                         </div>
-
-
                                     </form>
                                 </li>
                                 <li>
                                     <a class="link basket-link user-navigation-link" href="">Пусто</a>
                                     <form class="form basket-form">
                                         <div class="basket-form-row">
+                                            <p class="basket-item-img"><img src="img/item-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></p>
                                             <div class="basket-item">
-                                                <p class="basket-item-img"><img src="img/item-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></p>
                                                 <p class="basket-item-name">Пломбир с апельсиновым джемом</p>
+                                                <p>1,5 кг х <span class="basket-item-price">200 руб.</span></p>
+                                                <p>300 руб.</p>
                                             </div>
-                                            <p>1,5 кг х <span class="basket-item-price">200 руб.</span></p>
-                                            <p>300 руб.</p>
                                         </div>
                                         <div class="basket-form-row underline">
+                                            <p class="basket-item-img"><img src="img/item-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></p>
                                             <div class="basket-item">
-                                                <p class="basket-item-img"><img src="img/item-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></p>
                                                 <p class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</p>
+                                                <p>1,5 кг х <span class="basket-item-price">300 руб.</span></p>
+                                                <p>450 руб.</p>
                                             </div>
-                                            <p>1,5 кг х <span class="basket-item-price">300 руб.</span></p>
-                                            <p>450 руб.</p>
                                         </div>
                                         <p class="basket-sum">Итого: 750 руб.</p>
                                         <button class="button form-basket-button">Оформить заказ</button>
@@ -247,9 +245,9 @@
                         <form class="mail-form">
                             <p>
                                 <label class="visually-hidden" for="user-mailing-address">Электронная почта</label>
-                                <input id="user-mailing-address" type="text" name="user-mailing-address" placeholder="email@example.com">
+                                <input class="user-mailing-address" id="user-mailing-address" type="text" name="user-mailing-address" placeholder="email@example.com">
                             </p>
-                            <button class="button mail-send-button" type="submit">Отправить</button>
+                            <button class="button mail-send-button">Отправить</button>
                         </form>
                     </section>
                 </div>
@@ -295,32 +293,32 @@
             </footer>
         </div>
     </div>
-<section class="modal modal-feedback">
-  <h2 class="visually-hidden">Форма обратной связи</h2>
+    <section class="modal-feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form class="feedback-form form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="feedback-form-description">Мы обязательно вам ответим!</p>
 
+            <p>
+                <label class="visually-hidden" for="user-name">Имя</label>
+                <input class="feedback-form-name form-input" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+            </p>
+            <p>
+                <label class="visually-hidden" for="email">Электронная почта</label>
+                <input class="feedback-form-email form-input" id="email" type="text" name="email" placeholder="email@example.com">
+            </p>
+            <p>
+                <label class="visually-hidden" for="user-text">Ваше сообщение</label>
+                <textarea class="feedback-form-text" id="user-text" name="text" placeholder="В свободной форме" rows="7" cols="30"></textarea>
+            </p>
+            <button class="button feedback-form-button" type="submit">Отправить</button>
 
-  <form class="feedback-form form" action="https://echo.htmlacademy.ru" method="post">
-      <p>Мы обязательно вам ответим!</p>
-      
-      <p>
-          <label class="visually-hidden" for="user-name">Имя</label>
-          <input class="feedback-form-name form-input" id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
-      </p>
-      <p>
-          <label class="visually-hidden" for="email">Электронная почта</label>
-          <input class="feedback-form-login form-input" id="email" type="text" name="email" placeholder="email@example.com">
-      </p>
-      <p>
-          <label class="visually-hidden" for="user-text">Ваше сообщение</label>
-          <textarea id="user-text" type="text" name="text" placeholder="Напишите что-нибудь..." rows="5" cols="30"></textarea>
-      </p>
-      <button class="button" type="submit">Отправить</button>
-
-  </form>
-  <button class="modal-close" type="button">
-    <span class="visually-hidden">Закрыть</span>
-  </button>
-</section>
+        </form>
+        <button class="modal-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
+    </section>
+    <div class="modal-overlay"></div>
+    <script src="js/gllacy.js"></script>
 </body>
 
 </html>

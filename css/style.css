@@ -215,6 +215,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    z-index: 2;
 }
 
 .form p {
@@ -254,10 +255,6 @@ body {
     line-height: 24px;
     color: #323232;
     text-decoration: underline;
-    /*background-repeat: no-repeat;
-    background-position: center bottom 0px;
-    background-size: 100% 1px;
-    background-image: linear-gradient(to top, rgba(50, 50, 50, 0.3), rgba(50, 50, 50, 0.3));*/
 }
 
 .login-form-column {
@@ -275,34 +272,13 @@ body {
 .basket-form-row {
     padding-right: 20px;
     padding-bottom: 20px;
-}
-
-.basket-form {
-    display: none;
-    width: 509px;
-    height: 242px;
-    top: 50px;
-    right: 0;
-    padding: 0 15px;
-    padding-top: 10px;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 16px;
-    color: #323232;
-}
-
-.basket-item {
-    width: 265px;
     position: relative;
-    padding-left: 26px;
-    display: flex;
-    align-items: baseline;
 }
 
-.basket-item::before {
+.basket-form-row::before {
     content: "";
     position: absolute;
-    top: 3px;
+    top: 12px;
     left: 0;
     width: 11px;
     height: 11px;
@@ -311,17 +287,36 @@ body {
     background-position: 40% 0;
 }
 
-.basket-item-img {
+.basket-form {
+    display: none;
+    width: 509px;
+    height: 242px;
+    top: 50px;
+    right: 0;
+    padding: 5px 15px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #323232;
+}
+
+.basket-item {
+    width: 415px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
     position: relative;
 }
 
-.basket-item-img img {
-    position: absolute;
-    top: -20px;
+.basket-item-img {
+    width: 33px;
+    height: 33px;
+    margin: 0;
+    padding-left: 25px;
 }
 
 .basket-item-name {
-    padding-left: 48px;
+    width: 230px;
 }
 
 .basket-item-price {
@@ -966,7 +961,7 @@ body {
     margin: 0;
 }
 
-.mail-form #user-mailing-address {
+.user-mailing-address {
     border: 1px solid rgba(178, 178, 178, 0.52);
     border-radius: 5px;
     padding: 12px;
@@ -974,17 +969,19 @@ body {
     width: 368px;
 }
 
-.mail-form #user-mailing-address::placeholder {
+.user-mailing-address::placeholder {
     color: rgba(153, 153, 153, 1);
 }
 
-.mail-form #user-mailing-address:hover {
-    border: 2px solid rgba(154, 154, 154, 0.52);
+.user-mailing-address:hover {
+    border: 1px solid rgba(154, 154, 154, 0.52);
+    box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52) inset;
 }
 
-.mail-form #user-mailing-address:focus {
+.user-mailing-address:focus {
     outline: none;
-    border: 2px solid rgba(46, 136, 228, 0.52);
+    border: 1px solid rgba(46, 136, 228, 0.52);
+    box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52) inset;
 }
 
 .mail-send-button {
@@ -1532,50 +1529,152 @@ body {
     color: #323232;
     background-color: #ffffff;
 }
-.modal {
-  position: fixed;
-  color: #000000;
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(30px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
 .modal-feedback {
-  top: 120px;
-  left: 50%;
-
-  width: 300px;
-
+    position: fixed;
+    color: #323232;
+    z-index: 10;
+    top: 20%;
+    left: 35%;
+    width: 435px;
+    display: none;
 }
+
+.feedback-form {
+    width: 435px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 26px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    border-radius: 10px;
+}
+
+.feedback-form-description {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    padding-bottom: 16px;
+}
+
+.feedback-form-name,
+.feedback-form-email {
+    width: 267px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.feedback-form-text {
+    width: 100%;
+    box-sizing: border-box;
+    color: #999999;
+    padding: 12px;
+    border: 1px solid rgba(50, 50, 50, 0.3);
+    border-radius: 5px;
+    margin-bottom: 18px;
+    outline: none;
+    resize: none;
+}
+
+.feedback-form-button {
+    align-self: flex-end;
+}
+
 .modal-close {
-  position: absolute;
-  top: 0;
-  right: -34px;
-
-  width: 22px;
-  height: 22px;
-
-  background-color: transparent;
-  border: 0;
-
-  cursor: pointer;
-}
-
-.modal-close::before,
-.modal-close::after {
-  content: "";
-
-  position: absolute;
-  top: 10px;
-  left: 2px;
-
-  width: 19px;
-  height: 3px;
-
-  background-color: #d0d0d0;
-}
-
-.modal-close::before {
-  transform: rotate(45deg);
+    position: absolute;
+    top: 4px;
+    right: -36px;
+    width: 18px;
+    height: 17px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .modal-close::after {
-  transform: rotate(-45deg);
+    content: "";
+    position: absolute;
+    top: 8;
+    right: 0;
+    width: 18px;
+    height: 17px;
+    background-image: url("../img/cross-big.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.modal-overlay {
+    display: none;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay-show {
+    display: block;
+}
+
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+}
+
+.form-input:hover,
+.feedback-form-text:hover {
+    border: 1px solid rgba(154, 154, 154, 0.52);
+    box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52) inset;
+}
+
+.form-input:focus,
+.feedback-form-text:focus {
+    color: #323232;
+    box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52) inset;
+    border: 1px solid rgba(46, 136, 228, 0.52);
 }
