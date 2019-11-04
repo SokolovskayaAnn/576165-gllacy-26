@@ -40,7 +40,7 @@
                                     <form class="form search-form">
                                         <p>
                                             <label class="visually-hidden" for="search-field">Строка поиска</label>
-                                            <input class="form-input" id="search-field" type="search" name="search-field" value="" placeholder="Что ищем?">
+                                            <input class="form-input" id="search-field" type="search" name="search-field" value="" placeholder="Крем-брюле">
                                         </p>
                                     </form>
                                 </li>
@@ -49,11 +49,11 @@
                                     <form class="form login-form" method="post">
                                         <p>
                                             <label class="visually-hidden" for="user-email">Электронная почта</label>
-                                            <input class="form-input" id="user-email" type="text" name="user-email" placeholder="Электронная почта">
+                                            <input class="form-input" id="user-email" type="text" name="user-email" placeholder="email@example.com">
                                         </p>
                                         <p>
                                             <label class="visually-hidden" for="user-password">Пароль</label>
-                                            <input class="form-input" id="user-password" type="password" name="password" placeholder="Пароль">
+                                            <input class="form-input" id="user-password" type="password" name="password" placeholder="••••••••">
                                         </p>
                                         <div class="login-form-row">
                                             <button class="button form-login-button" type="submit">Войти</button>
@@ -65,7 +65,7 @@
                                     </form>
                                 </li>
                                 <li>
-                                    <a class="link basket-link user-navigation-link" href="">Пусто</a>
+                                    <a class="link basket-link user-navigation-link basket-empty" href="">Пусто</a>
                                     <form class="form basket-form">
                                         <div class="basket-form-row">
                                             <p class="basket-item-img"><img src="img/item-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></p>
@@ -152,12 +152,11 @@
                                     Сливочное с апельсиновым джемом и цитрусовой стружкой
                                 </h3>
                             </div>
-
                             <p class="catalog-item-image">
                                 <img src="img/item-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                             </p>
                             <p class="catalog-item-price">
-                                310 ₽<span>/кг</span>
+                                310<span class="rouble">₽</span><span class="item-price-unit">/кг</span>
                             </p>
                             <a class="catalog-item-link button" href="#">Быстрый просмотр</a>
                         </li>
@@ -171,7 +170,7 @@
                                 <img src="img/item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                             </p>
                             <p class="catalog-item-price">
-                                380 ₽<span>/кг</span>
+                                380<span class="rouble">₽</span><span class="item-price-unit">/кг</span>
                             </p>
                             <a class="catalog-item-link button" href="#">Быстрый просмотр</a>
                         </li>
@@ -185,7 +184,7 @@
                                 <img src="img/item-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                             </p>
                             <p class="catalog-item-price">
-                                355 ₽<span>/кг</span>
+                                355<span class="rouble">₽</span><span class="item-price-unit">/кг</span>
                             </p>
                             <a class="catalog-item-link button" href="#">Быстрый просмотр</a>
                         </li>
@@ -199,7 +198,7 @@
                                 <img src="img/item-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                             </p>
                             <p class="catalog-item-price">
-                                415 ₽<span>/кг</span>
+                                415<span class="rouble">₽</span><span class="item-price-unit">/кг</span>
                             </p>
                             <a class="catalog-item-link button" href="#">Быстрый просмотр</a>
                         </li>
@@ -217,7 +216,7 @@
                         </li>
                         <li class="advantage-item">
                             <h3 class="visually-hidden">Проверенные поставщики</h3>
-                            <p class="item-cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+                            <p class="item-cow">Закупка ингредиентов &nbsp;производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
                         </li>
                         <li class="advantage-item">
                             <h3 class="visually-hidden">Натуральные ингредиенты</h3>
@@ -287,7 +286,7 @@
                     </ul>
                 </div>
                 <div class="footer-copyright">
-                    <a class="link" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип htmlacademy"></a>
+                    <a class="link footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="37" alt="Логотип htmlacademy"></a>
                     <p>Сделано в <a class="link underline" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
                 </div>
             </footer>
@@ -318,7 +317,7 @@
         </button>
     </section>
     <div class="modal-overlay"></div>
-    <script src="js/gllacy.js"></script>
+    <script src="js/gllacy-compressed.js"></script>
 </body>
 
 </html>
