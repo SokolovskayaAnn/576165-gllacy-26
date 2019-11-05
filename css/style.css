@@ -7,11 +7,6 @@ body {
     font-weight: 700;
     color: #ffffff;
     background-color: #849d8f;
-    /*временно для сетки*/
-    /* background-image: url("../img/gllacy-index.jpg");
-    background-size: 1200px auto;
-    background-position: 50% 0%;
-    background-repeat: no-repeat;*/
 }
 
 .link {
@@ -91,7 +86,7 @@ body {
     margin: 13px 0px;
 }
 
-.user-navigation li {
+.user-navigation-li {
     position: relative;
 }
 
@@ -212,7 +207,6 @@ body {
     background-color: #f8f7f4;
     border-radius: 5px;
     flex-direction: column;
-    justify-content: space-evenly;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
@@ -241,20 +235,24 @@ body {
 .login-form {
     display: none;
     width: 230px;
-    height: 214px;
     top: 50px;
     right: 0;
-    padding: 0 15px;
+    padding: 20px 16px;
 }
-
+.login-form .form-input{
+    margin-bottom:20px;
+}
 .form-login-link {
     font-size: 13px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 20px;
     color: #323232;
     text-decoration: underline;
 }
-
+.login-form .form-login-button{
+    border-radius: 18px;
+    padding: 8px 22px;
+}
 .login-form-column {
     display: flex;
     flex-direction: column;
@@ -272,26 +270,24 @@ body {
     padding-bottom: 20px;
     position: relative;
 }
-
-.basket-form-row::before {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: 0;
-    width: 11px;
-    height: 11px;
+.basket-delete-item {
+    width: 16px;
+    border: none;
+    background-color: transparent;
     background-image: url("../img/cross-small.svg");
     background-repeat: no-repeat;
-    background-position: 40% 0;
+    background-position: 5px 12px;
+}
+.basket-delete-item:hover {
+    cursor: pointer;
 }
 
 .basket-form {
     display: none;
     width: 509px;
-    height: 242px;
     top: 50px;
     right: 0;
-    padding: 5px 15px;
+    padding: 20px 16px;
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
@@ -310,7 +306,6 @@ body {
     width: 33px;
     height: 33px;
     margin: 0;
-    padding-left: 25px;
 }
 
 .basket-item-name {
@@ -320,7 +315,9 @@ body {
 .basket-item-price {
     color: #999999;
 }
-
+.item-price{
+    padding-left:15px;
+}
 .basket-form .underline {
     background-position: center bottom 0px;
     background-size: 100% 1px;
@@ -332,6 +329,7 @@ body {
     font-weight: 700;
     line-height: 18px;
     align-self: flex-end;
+    padding: 15px 0;
 }
 
 .basket-form .form-basket-button {
@@ -355,19 +353,19 @@ body {
     cursor: default;
 }
 
-.user-navigation>li:hover .login-form {
-    display: flex;
+.user-navigation-li:hover .login-form {
+    display: block;
 }
 
-.user-navigation>li:hover .search-form {
-    display: flex;
+.user-navigation-li:hover .search-form {
+    display: block;
 }
 
 .list-item-basket:hover .basket-form {
     display: flex;
 }
 
-.site-navigation>li {
+.site-navigation-li {
     position: relative;
 }
 
@@ -415,7 +413,7 @@ body {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
-.site-navigation>li:hover .sub-menu {
+.site-navigation-li:hover .sub-menu {
     display: block;
 }
 
@@ -683,9 +681,11 @@ body {
 }
 
 .item-header-wrap {
+    width: 267px;
     text-align: center;
     order: 1;
     margin-top: 7px;
+
 }
 
 .catalog-item:hover .item-header-wrap {
@@ -721,7 +721,10 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
-
+.catalog-item:hover .catalog-item-image::before {
+    z-index: 2;
+    cursor: pointer;
+}
 .catalog-item-price {
     font-size: 45px;
     font-weight: 700;
@@ -748,7 +751,7 @@ body {
 }
 
 .catalog-item:hover .catalog-item-link {
-    display: block;
+    display: flex;
     margin-top: 15px;
     margin-bottom: 10px;
     order: 2;
@@ -911,7 +914,6 @@ body {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -921,7 +923,8 @@ body {
     font-weight: 400;
     line-height: 22px;
     color: #5a5a5a;
-    margin: 0;
+    margin: 35px 0;
+
 }
 
 .mail-form {
@@ -1025,9 +1028,6 @@ body {
 .feedback-button {
     margin: 22px 24px;
 }
-
-
-/***** *****/
 
 .main-footer {
     display: flex;
@@ -1219,7 +1219,7 @@ body {
     margin-right: 287px;
 }
 
-.row-1 {
+.filter-row-1 {
     margin-right: 290px;
 }
 
@@ -1248,10 +1248,13 @@ body {
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    -ms-appearance: none;
     appearance: none;
 }
-
-.form-select-wrap .form-select:hover {
+.form-select::-ms-expand {
+    display: none;
+}
+.form-select:hover {
     background: url("../img/icon-down-dir-black.svg");
     background-repeat: no-repeat;
     background-position: 92% 56%;
@@ -1345,9 +1348,8 @@ body {
 .filter-filler {
     width: 700px;
 }
-
-.filter-option input[type=radio],
-.filter-option input[type=checkbox] {
+.radio-input,
+.checkbox-input{
     display: none;
 }
 
@@ -1373,7 +1375,7 @@ body {
     opacity: 0.8;
 }
 
-.filter-option input[type=radio]:checked+label:before {
+.radio-input:checked+label:before {
     background: url("../img/radio-on.svg") 0 0 no-repeat;
 }
 
@@ -1381,8 +1383,8 @@ body {
     opacity: 1;
 }
 
-.filter-option input[type=radio]:disabled+label:before,
-.filter-option input[type=radio]:disabled+label {
+.radio-input:disabled+label:before,
+.radio-input:disabled+label {
     opacity: 0.4;
     cursor: default;
 }
@@ -1404,7 +1406,7 @@ body {
     opacity: 0.8;
 }
 
-.filter-option input[type=checkbox]:checked+label:before {
+.checkbox-input:checked+label:before {
     background: url("../img/checkbox-on.svg") 0 0 no-repeat;
 }
 
@@ -1412,8 +1414,8 @@ body {
     opacity: 1;
 }
 
-.filter-option input[type=checkbox]:disabled+label:before,
-.filter-option input[type=checkbox]:disabled+label {
+.checkbox-input:disabled+label:before,
+.checkbox-input:disabled+label {
     opacity: 0.4;
     cursor: auto;
 }
@@ -1614,8 +1616,9 @@ body {
     background-position: 0 0;
 }
 
-.modal-overlay {
-    display: none;
+.modal-overlay::before {
+    content: "";
+    visibility: hidden;
     z-index: 9;
     position: fixed;
     top: 0;
@@ -1625,8 +1628,8 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.modal-overlay-show {
-    display: block;
+.overlay-show::before {
+    visibility: visible;
 }
 
 .modal-show {

@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
     <title>GllacyShop</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="modal-overlay">
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
     <input class="visually-hidden" type="radio" id="product-2" name="toggle">
     <input class="visually-hidden" type="radio" id="product-3" name="toggle">
@@ -21,7 +22,7 @@
                         <img class="main-header-logo" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
                         <div class="main-navigation-wrapper">
                             <ul class="site-navigation">
-                                <li>
+                                <li class="site-navigation-li">
                                     <a class="link site-navigation-link catalog-link" href="#">Каталог</a>
                                     <ul class="sub-menu">
                                         <li><a class="sub-menu-link sub-menu-special" href="#">Новинки</a></li>
@@ -35,7 +36,7 @@
                                 <li><a class="link site-navigation-link" href="about.html">О Компании</a></li>
                             </ul>
                             <ul class="user-navigation">
-                                <li>
+                                <li class="user-navigation-li">
                                     <a class="link search-line user-navigation-link" href=""></a>
                                     <form class="form search-form">
                                         <p>
@@ -44,7 +45,7 @@
                                         </p>
                                     </form>
                                 </li>
-                                <li>
+                                <li class="user-navigation-li">
                                     <a class="link login-link user-navigation-link" href="">Вход</a>
                                     <form class="form login-form" method="post">
                                         <p>
@@ -64,7 +65,7 @@
                                         </div>
                                     </form>
                                 </li>
-                                <li>
+                                <li class="user-navigation-li">
                                     <a class="link basket-link user-navigation-link basket-empty" href="">Пусто</a>
                                     <form class="form basket-form">
                                         <div class="basket-form-row">
@@ -91,12 +92,10 @@
                         </div>
                     </div>
                 </nav>
-
                 <div class="header-contacts">
                     <p class="header-worktime">C 10 до 20, ежедневно</p>
                     <p class="header-telephone">8 812 450-25-25</p>
                 </div>
-
             </header>
         </div>
         <main>
@@ -130,7 +129,6 @@
                         </li>
                     </ul>
                 </section>
-
                 <div class="banners">
                     <section class="banner1">
                         <h2 class="banner-header">Малинка даром!</h2>
@@ -202,10 +200,8 @@
                             </p>
                             <a class="catalog-item-link button" href="#">Быстрый просмотр</a>
                         </li>
-
                     </ul>
                 </div>
-
                 <section class="advantages">
                     <h2 class="visually-hidden">Преимущества</h2>
                     <p class="advantages-description">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
@@ -223,7 +219,6 @@
                             <p class="item-eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
                             </p>
                         </li>
-
                         <li class="advantage-item">
                             <h3 class="visually-hidden">Надежная доставка</h3>
                             <p class="item-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
@@ -233,9 +228,8 @@
                 <div class="news-container">
                     <section class="news">
                         <h2 class="news-header">Новое в нашем блоге</h2>
-                        <p><a class="link news-link" href="">10 способов сервировки
-                                фруктовых щербетов к
-                                столу</a>
+                        <p>
+                            <a class="link news-link" href="">10 способов сервировки фруктовых щербетов к столу</a>
                         </p>
                     </section>
                     <section class="mail">
@@ -246,7 +240,7 @@
                                 <label class="visually-hidden" for="user-mailing-address">Электронная почта</label>
                                 <input class="user-mailing-address" id="user-mailing-address" type="text" name="user-mailing-address" placeholder="email@example.com">
                             </p>
-                            <button class="button mail-send-button">Отправить</button>
+                            <button class="button mail-send-button" type="submit">Отправить</button>
                         </form>
                     </section>
                 </div>
@@ -259,13 +253,10 @@
                     <p class="feedback-telephone-info">Для заказов по телефону:<br>
                         <strong class="feedback-telephone">8 812 450-25-25<br></strong>
                         <span class="feedback-worktime">(с 10 до 20 ежедневно)</span>
-
                     </p>
                     <button class="button feedback-button" type="button">Форма обратной связи</button>
                 </div>
-
             </div>
-
         </main>
         <div class="container">
             <footer class="main-footer">
@@ -296,7 +287,6 @@
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="feedback-form form" action="https://echo.htmlacademy.ru" method="post">
             <p class="feedback-form-description">Мы обязательно вам ответим!</p>
-
             <p>
                 <label class="visually-hidden" for="user-name">Имя</label>
                 <input class="feedback-form-name form-input" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
@@ -310,13 +300,11 @@
                 <textarea class="feedback-form-text" id="user-text" name="text" placeholder="В свободной форме" rows="7" cols="30"></textarea>
             </p>
             <button class="button feedback-form-button" type="submit">Отправить</button>
-
         </form>
         <button class="modal-close" type="button">
             <span class="visually-hidden">Закрыть</span>
         </button>
     </section>
-    <div class="modal-overlay"></div>
     <script src="js/gllacy-compressed.js"></script>
 </body>
 

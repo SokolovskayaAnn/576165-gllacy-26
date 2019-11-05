@@ -20,7 +20,7 @@
                         </a>
                         <div class="main-navigation-wrapper">
                             <ul class="site-navigation">
-                                <li>
+                                <li class="site-navigation-li">
                                     <a class="link site-navigation-link catalog-link current-navigation-link" href="#">Каталог</a>
                                     <ul class="sub-menu">
                                         <li><a class="sub-menu-link sub-menu-special" href="#">Новинки</a></li>
@@ -34,7 +34,7 @@
                                 <li><a class="link site-navigation-link" href="about.html">О Компании</a></li>
                             </ul>
                             <ul class="user-navigation">
-                                <li>
+                                <li class="user-navigation-li">
                                     <a class="link search-line user-navigation-link" href=""></a>
                                     <form class="form search-form">
                                         <p>
@@ -43,7 +43,7 @@
                                         </p>
                                     </form>
                                 </li>
-                                <li>
+                                <li class="user-navigation-li">
                                     <a class="link login-link user-navigation-link" href="">Вход</a>
                                     <form class="form login-form" method="post">
                                         <p>
@@ -67,35 +67,35 @@
                                     <a class="link basket-link user-navigation-link basket-full" href="">2 товара</a>
                                     <form class="form basket-form">
                                         <div class="basket-form-row">
+                                            <button class="basket-delete-item" type="button" name="button"></button>
                                             <p class="basket-item-img"><img src="img/item-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></p>
                                             <div class="basket-item">
                                                 <p class="basket-item-name">Пломбир с апельсиновым джемом</p>
                                                 <p>1,5 кг х <span class="basket-item-price">200 руб.</span></p>
-                                                <p>300 руб.</p>
+                                                <p class="item-price">300 руб.</p>
                                             </div>
                                         </div>
                                         <div class="basket-form-row underline">
+                                            <button class="basket-delete-item" type="button" name="button"></button>
                                             <p class="basket-item-img"><img src="img/item-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></p>
                                             <div class="basket-item">
                                                 <p class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</p>
                                                 <p>1,5 кг х <span class="basket-item-price">300 руб.</span></p>
-                                                <p>450 руб.</p>
+                                                <p class="item-price">450 руб.</p>
                                             </div>
                                         </div>
                                         <p class="basket-sum">Итого: 750 руб.</p>
-                                        <button class="button form-basket-button">Оформить заказ</button>
+                                        <a class="button form-basket-button">Оформить заказ</a>
                                     </form>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-
                 <div class="header-contacts">
                     <p class="header-worktime">C 10 до 20, ежедневно</p>
                     <p class="header-telephone">8 812 450-25-25</p>
                 </div>
-
             </header>
             <main>
                 <ul class="breadcrumbs">
@@ -107,16 +107,16 @@
                 <section class="filters">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
                     <form class="filters-form" method="GET" action="https://echo.htmlacademy.ru">
-                        <div class="filter-row row-1">
+                        <div class="filter-row filter-row-1">
                             <div class="filter-column">
                                 <label for="sorting" class="filter-name">Сортировка:</label>
                                 <div class="form-select-wrap">
                                     <select class="form-select" id="sorting" name="sorting">
-                                    <option class="select-option">по популярности</option>
-                                    <option class="select-option">сначала недорогие</option>
-                                    <option class="select-option">сначала дорогие</option>
-                                    <option class="select-option">по жирности</option>
-                                </select>
+                                        <option class="select-option">по популярности</option>
+                                        <option class="select-option">сначала недорогие</option>
+                                        <option class="select-option">сначала дорогие</option>
+                                        <option class="select-option">по жирности</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="filter-column">
@@ -133,21 +133,20 @@
                             <fieldset class="filter-column filter-fat">
                                 <legend class="filter-name">Жирность:</legend>
                                 <ul class="filter-list">
-
                                     <li class="filter-option radio-option">
-                                        <input type="radio" id="fat1" name="fat" value="0">
+                                        <input class="radio-input" type="radio" id="fat1" name="fat" value="0">
                                         <label for="fat1">0%</label>
                                     </li>
                                     <li class="filter-option radio-option">
-                                        <input type="radio" id="fat2" name="fat" value="10" checked>
+                                        <input class="radio-input" type="radio" id="fat2" name="fat" value="10" checked>
                                         <label for="fat2">до 10%</label>
                                     </li>
                                     <li class="filter-option radio-option">
-                                        <input type="radio" id="fat3" name="fat" value="30">
+                                        <input class="radio-input" type="radio" id="fat3" name="fat" value="30">
                                         <label for="fat3">до 30%</label>
                                     </li>
                                     <li class="filter-option radio-option">
-                                        <input type="radio" id="fat4" name="fat" value="30">
+                                        <input class="radio-input" type="radio" id="fat4" name="fat" value="30">
                                         <label for="fat4">выше 30%</label>
                                     </li>
                                 </ul>
@@ -157,25 +156,24 @@
                             <fieldset class="filter-filler">
                                 <legend class="filter-name">Наполнители:</legend>
                                 <ul class="filter-list">
-
                                     <li class="filter-option checkbox-option">
-                                        <input type="checkbox" id="filler1" name="filler1" value="chocolate" checked>
+                                        <input class="checkbox-input" type="checkbox" id="filler1" name="filler1" value="chocolate" checked>
                                         <label for="filler1">шоколадные</label>
                                     </li>
                                     <li class="filter-option checkbox-option">
-                                        <input type="checkbox" id="filler2" name="filler2" value="sugar" checked>
+                                        <input class="checkbox-input" type="checkbox" id="filler2" name="filler2" value="sugar" checked>
                                         <label for="filler2">сахарные присыпки</label>
                                     </li>
                                     <li class="filter-option checkbox-option">
-                                        <input type="checkbox" id="filler3" name="filler3" value="fruit">
+                                        <input class="checkbox-input" type="checkbox" id="filler3" name="filler3" value="fruit">
                                         <label for="filler3">фрукты</label>
                                     </li>
                                     <li class="filter-option checkbox-option">
-                                        <input type="checkbox" id="filler4" name="filler4" value="syrup">
+                                        <input class="checkbox-input" type="checkbox" id="filler4" name="filler4" value="syrup">
                                         <label for="filler4">сиропы</label>
                                     </li>
                                     <li class="filter-option checkbox-option">
-                                        <input type="checkbox" id="filler5" name="filler5" value="jam">
+                                        <input class="checkbox-input" type="checkbox" id="filler5" name="filler5" value="jam">
                                         <label for="filler5">джемы</label>
                                     </li>
                                 </ul>
@@ -193,7 +191,7 @@
                                     Сливочное с апельсиновым джемом и цитрусовой стружкой
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                             </p>
                             <p class="catalog-item-price">
@@ -207,7 +205,7 @@
                                     Сливочно-кофейное с кусочками шоколада
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                             </p>
                             <p class="catalog-item-price">
@@ -221,7 +219,7 @@
                                     Сливочно-клубничное с присыпкой из белого шоколада
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                             </p>
                             <p class="catalog-item-price">
@@ -235,7 +233,7 @@
                                     Сливочное крем-брюле с карамельной подливкой
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                             </p>
                             <p class="catalog-item-price">
@@ -249,7 +247,7 @@
                                     Сливочное с брусничным<br> джемом
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
                             </p>
                             <p class="catalog-item-price">
@@ -263,7 +261,7 @@
                                     Сливочно-черничное с цельными ягодами черники
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники ">
                             </p>
                             <p class="catalog-item-price">
@@ -277,7 +275,7 @@
                                     Сливочно-лимонное с карамельной присыпкой
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
                             </p>
                             <p class="catalog-item-price">
@@ -291,7 +289,7 @@
                                     Сливочное с шоколадной стружкой
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-8.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                             </p>
                             <p class="catalog-item-price">
@@ -305,7 +303,7 @@
                                     Сливочно-ванильное с <br>кусочками шоколада
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                             </p>
                             <p class="catalog-item-price">
@@ -319,7 +317,7 @@
                                     Сливочноe с ментоловым сиропом
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
                             </p>
                             <p class="catalog-item-price">
@@ -333,7 +331,7 @@
                                     Сливочное с кусочками черного шоколада
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
                             </p>
                             <p class="catalog-item-price">
@@ -347,7 +345,7 @@
                                     Сливочное с мятным сиропом
                                 </h3>
                             </div>
-                            <p>
+                            <p class="catalog-item-image">
                                 <img src="img/item-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
                             </p>
                             <p class="catalog-item-price">
@@ -357,8 +355,7 @@
                         </li>
                     </ul>
                     <ul class="pagination-list">
-
-                        <li class="pagination-item pagination-item-current"><a class="link pagination-link" href="">1</a></li>
+                        <li class="pagination-item pagination-item-current"><a class="link pagination-link">1</a></li>
                         <li class="pagination-item"><a class="link pagination-link" href="">2</a></li>
                         <li class="pagination-item"><a class="link pagination-link" href="">3</a></li>
                         <li class="pagination-item"><a class="link pagination-link" href="">4</a></li>
