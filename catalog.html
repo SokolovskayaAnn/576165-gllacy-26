@@ -6,7 +6,7 @@
     <title>GllacyShop</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-compressed.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,9 +65,9 @@
                                 </li>
                                 <li class="list-item-basket">
                                     <a class="link basket-link user-navigation-link basket-full" href="">2 товара</a>
-                                    <form class="form basket-form">
+                                    <div class="form basket-form">
                                         <div class="basket-form-row">
-                                            <button class="basket-delete-item" type="button" name="button"></button>
+                                            <button class="basket-delete-item" type="button" name="button" aria-label="Удалить товар из корзины"></button>
                                             <p class="basket-item-img"><img src="img/item-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></p>
                                             <div class="basket-item">
                                                 <p class="basket-item-name">Пломбир с апельсиновым джемом</p>
@@ -76,7 +76,7 @@
                                             </div>
                                         </div>
                                         <div class="basket-form-row underline">
-                                            <button class="basket-delete-item" type="button" name="button"></button>
+                                            <button class="basket-delete-item" type="button" name="button" aria-label="Удалить товар из корзины"></button>
                                             <p class="basket-item-img"><img src="img/item-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></p>
                                             <div class="basket-item">
                                                 <p class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</p>
@@ -86,7 +86,7 @@
                                         </div>
                                         <p class="basket-sum">Итого: 750 руб.</p>
                                         <a class="button form-basket-button">Оформить заказ</a>
-                                    </form>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -248,9 +248,9 @@
                             <p class="catalog-item-price">
                                 325<span class="rouble">₽</span><span class="item-price-unit">/кг</span>
                             </p>
-                            <div class="item-header-wrap">
+                            <div class="item-header-wrap item-header-width">
                                 <h3 class="item-header underline">
-                                    Сливочное с брусничным<br> джемом
+                                    Сливочное с брусничным джемом
                                 </h3>
                             </div>
                             <a class="catalog-item-link button" href="#">Быстрый просмотр</a>
@@ -304,9 +304,9 @@
                             <p class="catalog-item-price">
                                 440<span class="rouble">₽</span><span class="item-price-unit">/кг</span>
                             </p>
-                            <div class="item-header-wrap">
+                            <div class="item-header-wrap item-header-width">
                                 <h3 class="item-header underline">
-                                    Сливочно-ванильное с <br>кусочками шоколада
+                                    Сливочно-ванильное с кусочками шоколада
                                 </h3>
                             </div>
                             <a class="catalog-item-link button" href="#">Быстрый просмотр</a>
