@@ -239,9 +239,11 @@ body {
     right: 0;
     padding: 20px 16px;
 }
-.login-form .form-input{
-    margin-bottom:20px;
+
+.login-form .form-input {
+    margin-bottom: 20px;
 }
+
 .form-login-link {
     font-size: 13px;
     font-weight: 400;
@@ -249,10 +251,12 @@ body {
     color: #323232;
     text-decoration: underline;
 }
-.login-form .form-login-button{
+
+.login-form .form-login-button {
     border-radius: 18px;
     padding: 8px 22px;
 }
+
 .login-form-column {
     display: flex;
     flex-direction: column;
@@ -270,6 +274,7 @@ body {
     padding-bottom: 20px;
     position: relative;
 }
+
 .basket-delete-item {
     width: 16px;
     border: none;
@@ -278,6 +283,7 @@ body {
     background-repeat: no-repeat;
     background-position: 5px 12px;
 }
+
 .basket-delete-item:hover {
     cursor: pointer;
 }
@@ -315,9 +321,11 @@ body {
 .basket-item-price {
     color: #999999;
 }
-.item-price{
-    padding-left:15px;
+
+.item-price {
+    padding-left: 15px;
 }
+
 .basket-form .underline {
     background-position: center bottom 0px;
     background-size: 100% 1px;
@@ -641,10 +649,6 @@ body {
     background-position: 89% 47%;
 }
 
-.hits {
-    margin-bottom: 3px;
-}
-
 .catalog {
     display: flex;
     flex-direction: column;
@@ -660,7 +664,8 @@ body {
 }
 
 .catalog-item {
-    display: flex;
+    display: block;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     width: 267px;
@@ -670,27 +675,23 @@ body {
     position: relative;
 }
 
+.catalog-item:hover {
+    z-index: 1;
+}
+
 .catalog-item p {
     margin: 0;
     padding: 0;
 }
 
-.catalog-item:hover p {
-    z-index: 2;
-    cursor: pointer;
-}
-
 .item-header-wrap {
     width: 267px;
     text-align: center;
-    order: 1;
     margin-top: 7px;
-
 }
 
 .catalog-item:hover .item-header-wrap {
-    z-index: 2;
-    cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .item-header {
@@ -700,6 +701,7 @@ body {
     margin: 0;
     padding: 0;
     display: inline;
+    height:40px;
 }
 
 .underline {
@@ -708,6 +710,12 @@ body {
     background-position: center bottom 0px;
     background-size: 100% 1px;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+.catalog-item:hover .catalog-item-image{
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
 }
 
 .catalog-item-image::before {
@@ -721,10 +729,11 @@ body {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
 .catalog-item:hover .catalog-item-image::before {
-    z-index: 2;
-    cursor: pointer;
+    z-index: 3;
 }
+
 .catalog-item-price {
     font-size: 45px;
     font-weight: 700;
@@ -733,6 +742,11 @@ body {
     top: 209px;
     left: -2px;
     text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item:hover .catalog-item-price{
+    z-index: 2;
+    cursor: pointer;
 }
 
 .rouble {
@@ -751,10 +765,8 @@ body {
 }
 
 .catalog-item:hover .catalog-item-link {
-    display: flex;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    order: 2;
+    display: inline-block;
+    position: relative;
     z-index: 2;
 }
 
@@ -773,7 +785,6 @@ body {
     top: -7px;
     right: -13px;
     border-radius: 5px;
-    z-index: 1;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
     cursor: pointer;
@@ -932,8 +943,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2px;
-    margin-bottom: 6px;
 }
 
 .mail-form p {
@@ -957,6 +966,7 @@ body {
 .user-mailing-address:focus {
     border: 1px solid rgba(46, 136, 228, 0.52);
     box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52) inset;
+    color: #323232;
 }
 
 .mail-send-button {
@@ -1251,9 +1261,11 @@ body {
     -ms-appearance: none;
     appearance: none;
 }
+
 .form-select::-ms-expand {
     display: none;
 }
+
 .form-select:hover {
     background: url("../img/icon-down-dir-black.svg");
     background-repeat: no-repeat;
@@ -1369,14 +1381,16 @@ body {
     width: 25px;
     height: 25px;
     position: absolute;
-    left: -34px;
-    bottom: -4px;
+    left: -32px;
+    bottom: -6px;
     background: url("../img/radio-off.svg") 0 0 no-repeat;
+    background-size: 90%;
     opacity: 0.8;
 }
 
 .radio-input:checked+label:before {
     background: url("../img/radio-on.svg") 0 0 no-repeat;
+    background-size: 90%;
 }
 
 .filter-option label:hover:before {
@@ -1397,17 +1411,19 @@ body {
 .checkbox-option label:before {
     content: "";
     display: inline-block;
-    width: 23px;
+    width: 26px;
     height: 23px;
     position: absolute;
-    left: -35px;
-    bottom: -3px;
+    left: -33px;
+    bottom: -4px;
     background: url("../img/checkbox-off.svg") 0 0 no-repeat;
+    background-size: 80%;
     opacity: 0.8;
 }
 
 .checkbox-input:checked+label:before {
     background: url("../img/checkbox-on.svg") 0 0 no-repeat;
+    background-size: 95%;
 }
 
 .filter-option label:hover:before {
